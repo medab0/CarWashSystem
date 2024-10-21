@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox id="vbox" alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.carwashsystem.CarWashController"
+      stylesheets="@styles.css">
+    <Label text="Car Wash System" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="coinInput" promptText="Enter Coin (1, 5, 10, 20)" maxWidth="200"/>
+
+    <Button fx:id="addCoinButton" text="Add Coin" minWidth="100" onAction="#handleAddCoin"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="waterButton" text="Water (₱5)" disable="true" onAction="#handleWater" minWidth="80"/>
+        <Button fx:id="soapButton" text="Soap (₱10)" disable="true" onAction="#handleSoap" minWidth="80"/>
+        <Button fx:id="airButton" text="Air (₱15)" disable="true" onAction="#handleAir" minWidth="80"/>
+    </HBox>
+
+    <Label fx:id="balanceLabel" text="Balance: ₱0" style="-fx-font-size: 14px;"/>
+    <Label fx:id="statusLabel" text="Status: Waiting for coins..." wrapText="true" style="-fx-font-size: 14px;"/>
+
+    <Region prefHeight="10"/>
+</VBox>
